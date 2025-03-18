@@ -10,5 +10,11 @@ function adicionarAmigo(){
         return;
     }
     listaNomes.push(nome);
+    lista.innerHTML = '';
+    for (let i=0; i<listaNomes.length; i++){
+        let li = document.createElement('li');
+        li.textContent = listaNomes[i];
+        lista.appendChild(li);
+    }    
         nomes.value = '';
 }
